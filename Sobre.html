@@ -6,7 +6,18 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Caferia Delta Expresso</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <script>
+            if ("serviceWorker" in navigator) {
+              navigator.serviceWorker
+                .register("pwabuilder-sw.js")
+                .then(() => console.log("Service Worker registrado com sucesso!"))
+                .catch((error) =>
+                  console.log("Erro ao registrar Service Worker:", error)
+                );
+            }
+        </script>
+        <link rel="icon" type="image/x-icon" href="assets/images.png" />
+        <link rel="manifest" href="manifest.json" />
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
